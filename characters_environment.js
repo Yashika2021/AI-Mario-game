@@ -5,6 +5,9 @@
 
 /* main character variabes */
 var mario, bricks,clouds,mountains,enemyMushrooms,pipes,platforms,coins;
+noseX ="";
+noseY = "";
+gameStatus = ""; 
 
 /* Control variabes */
 var control={
@@ -46,14 +49,20 @@ var gameConfig={
 }
 
 
-/*=====  End of Variables  ======*/
+/*=====  End of Variables  === ===*/
 
 
 /*====================================
 =            Game Status             =
 ====================================*/
 
+function startGame(){
+  gameStatus = "start";
+  document.getElementById("status").innerHTML = "The Game Is Loading";
+}
+
 function game(){
+  console.log("nose x = "+ noseX + " nose y = "+ noseY)
 
   instializeInDraw();
   moveEnvironment(mario);
